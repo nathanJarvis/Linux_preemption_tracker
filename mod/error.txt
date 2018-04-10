@@ -1,0 +1,19 @@
+make -C /tmp/compile/nathan.jarvis/linux_source/linux ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- M=/tmp/compile/nathan.jarvis/linux_source/09_framework/mod modules
+make[1]: Entering directory `/tmp/compile/nathan.jarvis/linux_source/linux'
+  CC [M]  /tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.o
+/tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.c: In function ‘sched_monitor_read’:
+/tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.c:292:19: warning: unused variable ‘flags’ [-Wunused-variable]
+     unsigned long flags;
+                   ^
+/tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.c:291:33: warning: unused variable ‘tracker’ [-Wunused-variable]
+     struct preemption_tracker * tracker = retrieve_tracker_of_process(file);
+                                 ^
+/tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.c: In function ‘get_current_time’:
+/tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.c:61:19: warning: ‘ts’ is used uninitialized in this function [-Wuninitialized]
+     getnstimeofday(ts);
+                   ^
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.mod.o
+  LD [M]  /tmp/compile/nathan.jarvis/linux_source/09_framework/mod/sched_monitor.ko
+make[1]: Leaving directory `/tmp/compile/nathan.jarvis/linux_source/linux'
